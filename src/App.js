@@ -1,9 +1,12 @@
 import Main from "./components/Main";
+import { StateProvider } from "./Context";
 
 function App() {
   return (
     <>
-      <Main />
+      <StateProvider>
+        <Main />
+      </StateProvider>
     </>
   );
 }
