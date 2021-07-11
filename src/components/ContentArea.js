@@ -2,10 +2,10 @@ import {useContext} from "react";
 import {Ctx} from "../Context";
 
 function ContentArea() {
-  let width = useContext(Ctx).state.sideNavExpanded ? "col-span-10" : "col-span-12"
+  let width = useContext(Ctx).state.sideNavExpanded ? "w-5/6" : "w-11/12"
   return (
     <>
-      <div className={`${width} w-full p-5 bg-purple-500 h-screen`}>
+      <div className={`${width} p-5 bg-purple-500 h-screen transition-all`}>
         CONTENT
       </div>
     </>
