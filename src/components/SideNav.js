@@ -3,9 +3,10 @@ import { Ctx, Types } from "../Context";
 
 import Brand from "./Brand";
 import NavItems from "./NavItems";
+import collapseIcon from "../svgs/sidenav-expand-icon.svg";
 
-//loading all svgs in the folder for ease of demonstration
-const reqSvgs = require.context ( '../svgs', true, /\.svg$/ )
+//loading all nav svgs in the folder for ease of demonstration
+const reqSvgs = require.context ( '../svgs/navs', true, /\.svg$/ )
 const paths = reqSvgs.keys ()
 
 const svgs = paths.map( path => reqSvgs ( path ) )
@@ -13,6 +14,7 @@ const svgs = paths.map( path => reqSvgs ( path ) )
 function SideNav() {
   let [showNav, updateNav] = useState(true);
   let width = showNav ? "w-1/6" : "w-1/12";
+  let iconRotate = showNav ? "transform rotate-45" : "";
   const { dispatch } = useContext(Ctx);
   let sections = [
     {
@@ -53,13 +55,13 @@ function SideNav() {
     updateNav(!showNav);
     dispatch({ type: Types.SIDE_NAV_EXPANDED, payload: !showNav });
   }
-  console.log(showNav);
+
   return (
     <>
-      <div className={`${width} bg-gray-700 text-white h-screen transition-all overflow-y-auto`}>
+      <div className={`${width} bg-gray-700 text-white h-screen transition-all duration-300 overflow-y-auto`}>
         <div className="flex flex-col">
-          <button className=" bg-blue-400" onClick={handleUpdateNav}>
-            Click Me
+          <button className="bg-blue-400" onClick={handleUpdateNav}>
+            <img className={`${iconRotate} h-6 mx-auto transition-all duration-300`} src={collapseIcon} alt="collapse icon"/>
           </button>
           <Brand />
           <NavItems>{sections}</NavItems>
