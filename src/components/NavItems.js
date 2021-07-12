@@ -8,7 +8,7 @@ function NavItems({ children }) {
   let expanded = typeof state === "undefined" ? true : state;
   let titleClasses = expanded ? "" : "hidden";
   let navClasses = expanded ? "" : "hidden";
-  let imgClasses = expanded ? "" : "h-8 m-2";
+  let imgClasses = expanded ? "" : "h-8 m-2 mx-auto";
 
   function handleNavigate(route) {
     history.push(route)
@@ -27,9 +27,9 @@ function NavItems({ children }) {
             <div
               className="flex p-3 hover:bg-purple-500 hover:cursor-pointer"
               key={`nav-${navIdx}`}
-              onClick={() => handleNavigate(nav.title)}
+              onClick={() => handleNavigate("/example")}
             >
-              <span className="">
+              <span className={!expanded && "mx-auto"}>
                 <img
                   src={nav.icon}
                   className={`${imgClasses} h-6 mr-2 ml-5 transition-all filter invert`}

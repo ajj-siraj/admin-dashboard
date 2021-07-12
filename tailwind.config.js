@@ -5,14 +5,14 @@ module.exports = {
     extend: {
       keyframes: {
         fadeIn: {
-          "0%": { display: "none", opacity: 0 },
-          "1%": { display: "block", opacity: 0 },
-          "100%": { display: "block", opacity: 1 },
+          "0%": { visibility: "hidden", opacity: 0 },
+          "30%": { visibility: "visible", opacity: 0 },
+          "100%": { visibility: "visible", opacity: 1 },
         },
         fadeOut: {
-          "0%": { display: "block", opacity: 1 },
-          "1%": { display: "none", opacity: 1 },
-          "100%": { display: "none", opacity: 0 },
+          "0%": { visibility: "visible", opacity: 1 },
+          "1%": { visibility: "hidden", opacity: 1, position: "fixed", zIndex: -100  },
+          "100%": { visibility: "hidden", opacity: 0, position: "fixed", zIndex: -100 },
         },
       },
       animation: {
