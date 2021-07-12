@@ -18,35 +18,35 @@ function SideNav() {
   const { dispatch } = useContext(Ctx);
   let sections = [
     {
-      title: "Section 1",
+      title: "System",
       navs: [
-        { icon: svgs[0].default, title: "Nav 1" },
-        { icon: svgs[1].default, title: "Nav 1" },
-        { icon: svgs[2].default, title: "Nav 1" },
+        { icon: svgs[0].default, title: "Dashboard", route: "/dashboard" },
+        { icon: svgs[1].default, title: "System", route: "/example" },
+        { icon: svgs[2].default, title: "Analytics", route: "/example" },
       ],
     },
     {
       title: "Section 2",
       navs: [
-        { icon: svgs[3].default, title: "Nav 1" },
-        { icon: svgs[4].default, title: "Nav 1" },
-        { icon: svgs[5].default, title: "Nav 1" },
+        { icon: svgs[3].default, title: "Nav 1", route: "/example" },
+        { icon: svgs[4].default, title: "Nav 1", route: "/example" },
+        { icon: svgs[5].default, title: "Nav 1", route: "/example" },
       ],
     },
     {
       title: "Section 3",
       navs: [
-        { icon: svgs[6].default, title: "Nav 1" },
-        { icon: svgs[7].default, title: "Nav 1" },
-        { icon: svgs[8].default, title: "Nav 1" },
+        { icon: svgs[6].default, title: "Nav 1", route: "/example" },
+        { icon: svgs[7].default, title: "Nav 1", route: "/example" },
+        { icon: svgs[8].default, title: "Nav 1", route: "/example" },
       ],
     },
     {
       title: "Section 4",
       navs: [
-        { icon: svgs[9].default, title: "Nav 1" },
-        { icon: svgs[10].default, title: "Nav 1" },
-        { icon: svgs[11].default, title: "Nav 1" },
+        { icon: svgs[9].default, title: "Nav 1", route: "/example" },
+        { icon: svgs[10].default, title: "Nav 1", route: "/example" },
+        { icon: svgs[11].default, title: "Nav 1", route: "/example" },
       ],
     },
   ];

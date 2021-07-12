@@ -27,7 +27,7 @@ function NavItems({ children }) {
             <div
               className="flex p-3 hover:bg-purple-500 hover:cursor-pointer"
               key={`nav-${navIdx}`}
-              onClick={() => handleNavigate("/example")}
+              onClick={() => handleNavigate(nav.route)}
             >
               <span className={!expanded && "mx-auto"}>
                 <img
