@@ -60,6 +60,7 @@ function HeaderNav() {
               data={sampleData.notif}
               onChildClick={() => setActive("notifications")}
               active={activeNav === "notifications" ? true : false}
+              onChildBlur={() => setActive("")}
             />
           </li>
           <li className={navClasses}>
@@ -68,6 +69,7 @@ function HeaderNav() {
               data={sampleData.msg}
               onChildClick={() => setActive("messages")}
               active={activeNav === "messages" ? true : false}
+              onChildBlur={() => setActive("")}
             />
           </li>
           <li className={navClasses}>
@@ -76,6 +78,7 @@ function HeaderNav() {
               data={sampleData.profile}
               onChildClick={() => setActive("profile")}
               active={activeNav === "profile" ? true : false}
+              onChildBlur={() => setActive("")}
             />
           </li>
         </ul>

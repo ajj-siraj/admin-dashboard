@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function NavIcon({ type, data, active, onChildClick }) {
+function NavIcon({ type, data, active, onChildClick, onChildBlur }) {
   let dropdownClasses = active ? "w-40 animate-fadeIn" : "w-0 h-0 animate-fadeOut";
 
   let dropdownItems = data?.data?.map((msg, idx) => {
@@ -9,7 +9,7 @@ function NavIcon({ type, data, active, onChildClick }) {
 
   return (
     <>
-      <div className="relative cursor-pointer" onClick={onChildClick}>
+      <div className="relative cursor-pointer" onClick={onChildClick} onBlur={onChildBlur} tabIndex={0}>
         <span className="absolute bg-red-600 text-gray-100 left-1/2 -top-1/4 w-5 rounded-full text-xs">
           {3}
         </span>
