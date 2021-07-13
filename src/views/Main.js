@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import ContentArea from "../components/ContentArea";
 import SideNav from "../components/SideNav";
 import {Switch, Route} from "react-router-dom";
@@ -11,8 +10,8 @@ function Main() {
       <div className="flex">
         <SideNav />
         <Switch>
-          <Route path="/example" component={ContentArea} children={Example}/>
-          <Route path="/dashboard" component={ContentArea} children={Dashboard}/>
+          <Route path="/example" render={() => <ContentArea view={<Example />} />}/>
+          <Route path="/dashboard" render={() => <ContentArea view={<Dashboard />} />}/>
         </Switch>
       </div>
     </>

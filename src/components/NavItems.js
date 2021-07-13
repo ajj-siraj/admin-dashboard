@@ -6,8 +6,8 @@ function NavItems({ children }) {
   let history = useHistory();
   let state = useContext(Ctx).state.sideNavExpanded;
   let expanded = typeof state === "undefined" ? true : state;
-  let titleClasses = expanded ? "" : "hidden";
-  let navClasses = expanded ? "" : "hidden";
+  let titleClasses = expanded ? "animate-fadeIn" : "animate-fadeOut hidden";
+  let navClasses = expanded ? "animate-fadeIn" : "animate-fadeOut hidden";
   let imgClasses = expanded ? "" : "h-8 m-2 mx-auto";
 
   function handleNavigate(route) {
@@ -29,7 +29,7 @@ function NavItems({ children }) {
               key={`nav-${navIdx}`}
               onClick={() => handleNavigate(nav.route)}
             >
-              <span className={!expanded && "mx-auto"}>
+              <span className={!expanded ? "mx-auto" : undefined}>
                 <img
                   src={nav.icon}
                   className={`${imgClasses} h-6 mr-2 ml-5 transition-all filter invert`}

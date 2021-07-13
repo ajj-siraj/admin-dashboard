@@ -1,7 +1,7 @@
 function Example(){
   return(
     <div>
-      This is the Example!;
+      This is the Example!
     </div>
   );
 }
