@@ -10,6 +10,10 @@ const StateProvider = ({ children }) => {
       case Types.SIDE_NAV_EXPANDED: {
         return {...state, sideNavExpanded: action.payload}
       }
+
+      case Types.DROPDOWN_CLICKED: {
+        return {...state, dropdownClicked: action.payload}
+      }
       case Types.LOADING_START: {
         return  {...state, isLoading: true };
       }
@@ -47,4 +51,5 @@ export const Types = {
   SET_ERROR: "SET_ERROR",
   REMOVE_ERROR: "REMOVE_ERROR",
   SIDE_NAV_EXPANDED: "SIDE_NAV_EXPANDED",
+  DROPDOWN_CLICKED: "DROPDOWN_CLICKED"
 };
