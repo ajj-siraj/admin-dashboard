@@ -7,7 +7,7 @@ import Example from "./Example";
 function Main() {
   return (
     <>
-      <div className="flex">
+      <div className="flex overflow-x-hidden">
         <SideNav />
         <Switch>
           <Route path="/example" render={() => <ContentArea view={<Example />} />}/>

@@ -5,7 +5,7 @@ import { Ctx } from "../Context";
 function Brand() {
   let state = useContext(Ctx).state.sideNavExpanded;
   let expanded = typeof state === "undefined" ? true : state;
-  let brandClasses = expanded ? "animate-fadeIn" : "animate-fadeOut";
+  let brandClasses = expanded ? "animate-fadeIn1" : "animate-fadeOut";
   return (
     <>
       <div className="flex flex-wrap mx-auto p-7 items-center gap-2">

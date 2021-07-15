@@ -8,27 +8,27 @@ import msg from "../svgs/navs/chatting-oval-speech-bubbles.svg";
 let sampleData = {
   notif: {
     data: [
-      { content: "First Notification!", dateTime: new Date() },
-      { content: "Second Notification...", dateTime: new Date() },
-      { content: "Third Notification?", dateTime: new Date() },
+      { content: "First Notification!", dateTime: new Date(`2021-07-14T14:50:28+00:00`) },
+      { content: "Second Notification...", dateTime: new Date(`2021-06-14T14:50:28+00:00`) },
+      { content: "Third Notification?", dateTime: new Date(`2020-06-14T14:50:28+00:00`) },
     ],
     link: "/notification",
     icon: bell,
   },
   msg: {
     data: [
-      { content: "First Message!", dateTime: new Date() },
-      { content: "Second Message...", dateTime: new Date() },
-      { content: "Third Message?", dateTime: new Date() },
+      { content: "First Message!", dateTime: new Date(`2021-06-14T14:50:28+00:00`) },
+      { content: "Second Message...", dateTime: new Date(`2021-06-14T14:50:28+00:00`) },
+      { content: "Third Message?", dateTime: new Date(`2021-06-14T14:50:28+00:00`) },
     ],
     link: "/messages",
     icon: msg,
   },
   profile: {
     data: [
-      { content: "First Message!", dateTime: new Date() },
-      { content: "Second Message...", dateTime: new Date() },
-      { content: "Third Message?", dateTime: new Date() },
+      { content: "First Message!", dateTime: new Date(`2021-07-14T14:50:28+00:00`) },
+      { content: "Second Message...", dateTime: new Date(`2021-07-14T14:50:28+00:00`) },
+      { content: "Third Message?", dateTime: new Date(`2021-07-14T14:50:28+00:00`) },
     ],
     link: "/profile",
     icon: avatar,
@@ -41,7 +41,7 @@ function HeaderNav() {
 
   return (
     <>
-      <nav className="flex bg-gray-100 justify-between items-stretch shadow-lg m-2 rounded-full">
+      <nav className="flex bg-gray-100 justify-between items-stretch mx-5 my-3 shadow-lg rounded-full">
         <ul className="flex w-1/2 ml-8">
           <Link className={navClasses} to="/dashboard">
             <li>Dashboard</li>
