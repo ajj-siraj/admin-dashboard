@@ -16,7 +16,6 @@ function NavIcon({ type, data, active, onChildClick, onChildBlur }) {
     } else {
       border = "border-b-2";
     }
-    console.log(msg.dateTime)
     return (
       <div
         className={`relative p-3 pb-8 text-left text-sm ${border} ${rounded} hover:bg-gray-200`}
@@ -41,7 +40,7 @@ function NavIcon({ type, data, active, onChildClick, onChildBlur }) {
         </span>
         <img className="h-6" src={data.icon} alt={`navicon-${type}`} />
         <div
-          className={`${dropdownClasses} absolute flex flex-col top-11/12 right-1 transition-all bg-white filter drop-shadow-2xl rounded-lg drop-shadow-lg`}
+          className={`${dropdownClasses} absolute flex flex-col top-11/12 right-1 transition-all bg-white shadow-md rounded-lg`}
         >
           {dropdownItems}
         </div>

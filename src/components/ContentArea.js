@@ -7,7 +7,7 @@ function ContentArea({view}) {
 
   return (
     <>
-      <div className={`${width} bg-purple-500 h-screen transition-all duration-300`}>
+      <div className={`${width} bg-white h-screen transition-all duration-300`}>
         <HeaderNav />
         <div>
           {view}

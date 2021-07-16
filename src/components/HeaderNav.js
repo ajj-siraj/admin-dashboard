@@ -41,7 +41,7 @@ function HeaderNav() {
 
   return (
     <>
-      <nav className="flex bg-gray-100 justify-between items-stretch mx-5 my-3 shadow-lg rounded-full">
+      <nav className="flex bg-gray-100 justify-between items-stretch mx-5 my-3 shadow-md rounded-full">
         <ul className="flex w-1/2 ml-8">
           <Link className={navClasses} to="/dashboard">
             <li>Dashboard</li>
