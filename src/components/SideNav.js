@@ -73,8 +73,11 @@ function SideNav() {
           <div {...props} className="bg-gray-400 rounded-md opacity-60" />
         )}
       >
-        <div className="flex flex-col">
-          <button className="bg-blue-400" onClick={handleUpdateNav}>
+        <div className="flex flex-col mt-10">
+          <button
+            className=" bg-gray-700 p-5 transition-all hover:bg-gray-500 px-3 rounded-lg"
+            onClick={handleUpdateNav}
+          >
             <img
               className={`${iconRotate} h-6 mx-auto transition-all duration-300`}
               src={collapseIcon}
@@ -82,6 +85,7 @@ function SideNav() {
             />
           </button>
           <Brand />
+
           <NavItems>{sections}</NavItems>
         </div>
       </Scrollbars>

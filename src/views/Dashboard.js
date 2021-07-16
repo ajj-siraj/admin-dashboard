@@ -28,24 +28,24 @@ const options = {
 
 function Dashboard() {
   return (
-    <div className="flex justify-between w-5/6 mx-auto">
+    <div className="flex flex-wrap justify-between w-5/6 mx-auto mt-10">
       <div className="">
         <Line
-          className="bg-gradient-to-r from-blue-700 to-indigo-700 rounded-xl"
+          className="bg-gradient-to-r from-blue-700 to-indigo-700 rounded-xl mt-10"
           data={data}
           options={options}
         />
       </div>
       <div className="">
         <Line
-          className="bg-gradient-to-r from-blue-400 to-yellow-500 rounded-xl"
+          className="bg-gradient-to-r from-blue-400 to-yellow-500 rounded-xl mt-10"
           data={data}
           options={options}
         />
       </div>
       <div className="">
         <Line
-          className="bg-gradient-to-r from-blue-400 to-green-500 rounded-xl"
+          className="bg-gradient-to-r from-blue-400 to-green-500 rounded-xl mt-10"
           data={data}
           options={options}
         />

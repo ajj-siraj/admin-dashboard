@@ -8,7 +8,7 @@ function Brand() {
   let brandClasses = expanded ? "animate-fadeIn1" : "animate-fadeOut";
   return (
     <>
-      <div className="flex flex-wrap mx-auto p-7 items-center gap-2">
+      <div className="flex flex-wrap mx-auto mt-5 p-4 items-center gap-2">
         <img className="h-16" src={logo} alt="brand logo" />
         <span className={`${brandClasses} text-3xl`}>Brand</span>
       </div>
