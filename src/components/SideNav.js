@@ -63,7 +63,7 @@ function SideNav() {
   }
 
   return (
-    <div className={`${width} bg-gray-700 text-white transition-all duration-300 overflow-y-auto`}>
+    <div className={`${width} fixed bg-gray-700 text-white transition-all duration-300 overflow-y-auto`}>
       <Scrollbars
         autoHide
         autoHeight
