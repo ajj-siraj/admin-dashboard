@@ -31,7 +31,7 @@ function Dashboard() {
       </div>
       <div>
         <h1 className="relative text-xl ml-5 mt-2 uppercase font-bold">
-          Highlights
+          Announcements
           <span className="absolute top-full left-0 w-11/12 h-1 bg-gray-700 rounded-full"></span>
         </h1>
       </div>
