@@ -62,7 +62,7 @@ function HeaderNav() {
           <Link className={navClasses} to="/example">
             <li>Settings</li>
           </Link>
-          <Link className={navClasses} to="/example">
+          <Link className={navClasses} to="/users">
             <li>Users</li>
           </Link>
         </ul>

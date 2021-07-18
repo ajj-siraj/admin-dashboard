@@ -10,9 +10,9 @@ function Logout() {
   let {dispatch} = useContext(Ctx);
 
   useEffect(() => {
-    setTimeout(() => dispatch({type: Types.LOGOUT_SUBMIT, loggingOut: false}), 4000)
+    setTimeout(() => dispatch({type: Types.LOGOUT_SUBMIT, loggingOut: false}), 3000)
     console.log("IS THIS FIRING")
-  }, [history]);
+  }, [history, dispatch]);
 
   return (
     <div
