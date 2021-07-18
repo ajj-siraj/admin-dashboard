@@ -22,8 +22,12 @@ const StateProvider = ({ children }) => {
         return  {...state, isLoading: false };
       }
 
-      case Types.SET_USERNAME: {
-        return {...state, ...action.payload };
+      case Types.LOGIN_SUBMIT: {
+        return {...state, loggedIn: true };
+      }
+
+      case Types.LOGOUT_SUBMIT: {
+        return {...state, loggedIn: false, loggingOut: action.loggingOut };
       }
 
       case Types.SET_ERROR: {
@@ -47,9 +51,10 @@ export { Ctx, StateProvider };
 export const Types = {
   LOADING_START: "LOADING_START",
   LOADING_DONE: "LOADING_DONE",
-  SET_USERNAME: "SET_USERNAME",
+  LOGIN_SUBMIT: "LOGIN_SUBMIT",
+  LOGOUT_SUBMIT: "LOGOUT_SUBMIT",
   SET_ERROR: "SET_ERROR",
   REMOVE_ERROR: "REMOVE_ERROR",
   SIDE_NAV_EXPANDED: "SIDE_NAV_EXPANDED",
-  DROPDOWN_CLICKED: "DROPDOWN_CLICKED"
+  DROPDOWN_CLICKED: "DROPDOWN_CLICKED",
 };

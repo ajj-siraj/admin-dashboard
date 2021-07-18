@@ -1,19 +1,41 @@
+import { useContext } from "react";
+
 import ContentArea from "../components/ContentArea";
 import SideNav from "../components/SideNav";
-import {Switch, Route} from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Example from "./Example";
+import Login from "./Login";
+import Logout from "./Logout";
+import { Ctx } from "../Context";
 
 function Main() {
+  let state = useContext(Ctx).state;
+  let loggedIn = state.loggedIn ? state.loggedIn : false;
+  let loggingOut = state.loggingOut ? state.loggingOut : false;
+
   return (
     <>
-      <div className="flex overflow-x-hidden">
-        <SideNav />
-        <Switch>
-          <Route path="/example" render={() => <ContentArea view={<Example />} />}/>
-          <Route path="/dashboard" render={() => <ContentArea view={<Dashboard />} />}/>
-        </Switch>
-      </div>
+      {!loggedIn ? (
+        <>
+          
+          <Switch>
+            <Route path="/login" render={() => <Login />} />
+            <Route path="/logout" render={() => <Logout />} />
+          </Switch>
+          {!loggingOut ? <Redirect to="/login" /> : null}
+        </>
+      ) : (
+        <div className="flex overflow-x-hidden">
+          <SideNav />
+          <Switch>
+            <Route path="/login" render={() => <Login />} />
+            <Route path="/logout" render={() => <Logout />} />
+            <Route path="/example" render={() => <ContentArea view={<Example />} />} />
+            <Route path="/" render={() => <ContentArea view={<Dashboard />} />} />
+          </Switch>
+        </div>
+      )}
     </>
   );
 }

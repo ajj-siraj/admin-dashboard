@@ -49,7 +49,7 @@ function Charts() {
           </h2>
         </div>
         <Line
-          className="bg-gradient-to-r from-blue-400 to-yellow-500 rounded-xl"
+          className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-xl"
           data={data}
           options={options}
         />
@@ -61,7 +61,7 @@ function Charts() {
           </h2>
         </div>
         <Line
-          className="bg-gradient-to-r from-blue-400 to-green-500 rounded-xl"
+          className="bg-gradient-to-r from-red-400 to-pink-500 rounded-xl"
           data={data}
           options={options}
         />

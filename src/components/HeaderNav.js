@@ -1,11 +1,14 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useContext } from "react";
+import { Link, useHistory } from "react-router-dom";
+import cogoToast from "cogo-toast";
+
+import {Ctx, Types} from "../Context";
 import NavIcon from "./NavIcon";
 import avatar from "../svgs/brandlogo.svg";
 import bell from "../svgs/navs/alarm-bell-outline.svg";
 import msg from "../svgs/navs/chatting-oval-speech-bubbles.svg";
 
-let sampleData = {
+const sampleData = {
   notif: {
     data: [
       { content: "First Notification!", dateTime: new Date(`2021-07-14T14:50:28+00:00`) },
@@ -35,10 +38,20 @@ let sampleData = {
   },
 };
 
+
+
 function HeaderNav() {
   let navClasses = "p-5 text-center w-full m-auto";
   let [activeNav, setActive] = useState(null);
+  let {dispatch, state} = useContext(Ctx)
+  let loggedIn = state?.loggedIn ? state.loggedIn : false;
+  let history = useHistory();
 
+  function handleLogout(){
+    dispatch({type: Types.LOGOUT_SUBMIT, loggingOut: true})
+    cogoToast.success("You have been logged out.")
+    history.push("/logout")
+  }
   return (
     <>
       <nav className="flex bg-white justify-between items-stretch mx-5 my-3 shadow-md rounded-full">
@@ -81,6 +94,9 @@ function HeaderNav() {
               onChildBlur={() => setActive("")}
             />
           </li>
+          {loggedIn ? (<li>
+            <button onClick={handleLogout} className="p-3 mt-2 text-gray-500 rounded-lg hover:bg-gray-200">Logout</button>
+            </li>) : null}
         </ul>
       </nav>
     </>
