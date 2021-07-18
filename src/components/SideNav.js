@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Scrollbars } from "react-custom-scrollbars-2";
 
 import { Ctx, Types } from "../Context";
@@ -53,6 +53,8 @@ function SideNav() {
     },
   ];
 
+  useEffect(() => dispatch({ type: Types.SIDE_NAV_EXPANDED, payload: true }), [dispatch]);
+
   function handleUpdateNav() {
     updateNav(!showNav);
     dispatch({ type: Types.SIDE_NAV_EXPANDED, payload: !showNav });
@@ -63,7 +65,9 @@ function SideNav() {
   }
 
   return (
-    <div className={`${width} fixed bg-gray-700 text-white transition-all duration-300 overflow-y-auto`}>
+    <div
+      className={`${width} fixed bg-gray-700 text-white transition-all duration-300 overflow-y-auto`}
+    >
       <Scrollbars
         autoHide
         autoHeight
@@ -73,13 +77,13 @@ function SideNav() {
           <div {...props} className="bg-gray-400 rounded-md opacity-60" />
         )}
       >
-        <div className="flex flex-col mt-10">
+        <div className="flex flex-col">
           <button
             className=" bg-gray-700 p-5 transition-all hover:bg-gray-500 px-3 rounded-lg"
             onClick={handleUpdateNav}
           >
             <img
-              className={`${iconRotate} h-6 mx-auto transition-all duration-300`}
+              className={`${iconRotate} h-6 mx-auto transition-all duration-300 filter invert`}
               src={collapseIcon}
               alt="collapse icon"
             />

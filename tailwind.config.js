@@ -14,11 +14,17 @@ module.exports = {
           "1%": { visibility: "hidden", opacity: 1, position: "fixed", zIndex: -100  },
           "100%": { visibility: "hidden", opacity: 0, position: "fixed", zIndex: -100 },
         },
+        fadeOut2:{
+          "0%": { visibility: "hidden", opacity: 0 },
+          "30%": { visibility: "visible", opacity: 0 },
+          "100%": { visibility: "visible", opacity: 1 },
+        }
       },
       animation: {
         fadeIn1: "fadeIn 1s ease-in-out forwards",
         fadeIn2: "fadeIn 0.3s ease-in-out forwards",
         fadeOut: "fadeOut 0.5s ease-in-out forwards",
+        fadeOut2: "fadeOut2 0.5s ease-in-out forwards"
       },
     },
   },

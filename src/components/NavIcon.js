@@ -40,7 +40,7 @@ function NavIcon({ type, data, active, onChildClick, onChildBlur }) {
         </span>
         <img className="h-6" src={data.icon} alt={`navicon-${type}`} />
         <div
-          className={`${dropdownClasses} absolute flex flex-col top-11/12 right-1 transition-all bg-white shadow-md rounded-lg`}
+          className={`${dropdownClasses} absolute z-10 flex flex-col top-11/12 right-1 transition-all bg-white shadow-md rounded-lg`}
         >
           {dropdownItems}
         </div>

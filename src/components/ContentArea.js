@@ -3,11 +3,12 @@ import {Ctx} from "../Context";
 import HeaderNav from "./HeaderNav";
 
 function ContentArea({view}) {
-  let width = useContext(Ctx).state.sideNavExpanded ? "ml-56 w-5/6" : "ml-28 w-11/12"
+
+  let marginLeft = useContext(Ctx).state.sideNavExpanded ? "16.667%" : "8.333%"
 
   return (
     <>
-      <div className={`${width} bg-white h-screen transition-all duration-300 justify-self-end`}>
+      <div style={{marginLeft: marginLeft}} className={`bg-gray-100 w-full transition-all duration-300 justify-self-end`}>
         <HeaderNav />
         <div>
           {view}
