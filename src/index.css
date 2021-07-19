@@ -21,3 +21,9 @@
       }
   } 
 }
+
+/* Toggle Switch */
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #025ed6;
+}

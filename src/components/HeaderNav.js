@@ -59,7 +59,7 @@ function HeaderNav() {
           <Link className={navClasses} to="/dashboard">
             <li>Dashboard</li>
           </Link>
-          <Link className={navClasses} to="/example">
+          <Link className={navClasses} to="/settings">
             <li>Settings</li>
           </Link>
           <Link className={navClasses} to="/users">

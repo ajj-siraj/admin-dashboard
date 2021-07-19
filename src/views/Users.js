@@ -3,6 +3,7 @@ import joseph from "../imgs/JosephManderly.jpg";
 import alex from "../imgs/AlexJacobson.jpg";
 import jc from "../imgs/JCDenton.png";
 import admin from "../imgs/admin.png";
+import profileOverlay from "../imgs/profile-overlay.png";
 
 function Users() {
   let users = [
@@ -70,13 +71,20 @@ function Users() {
             key={`user-${idx}`}
           >
             <div
-              className="h-16 w-16 rounded-full mx-auto"
+              className="relative h-16 w-16 rounded-full mx-auto"
               style={{
                 backgroundImage: `url("${user.profile}")`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
-            ></div>
+            >
+              <div style={{
+                backgroundImage: `url("${profileOverlay}")`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }} className="absolute z-30 h-16 w-16 border border-black rounded-full">
+              </div>
+            </div>
             <div>{user.author.name}</div>
             <div>{user.author.position}</div>
             <div>{user.dateJoined.toDateString()}</div>

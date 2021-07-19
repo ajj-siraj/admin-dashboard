@@ -8,7 +8,7 @@ function ContentArea({view}) {
 
   return (
     <>
-      <div style={{marginLeft: marginLeft}} className={`bg-gray-100 w-full transition-all duration-300 justify-self-end`}>
+      <div style={{marginLeft: marginLeft}} className={`bg-gray-100 min-h-screen w-full transition-all duration-300 justify-self-end`}>
         <HeaderNav />
         <div>
           {view}

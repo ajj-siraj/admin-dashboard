@@ -4,6 +4,7 @@ import Stats from "../components/Stats";
 import Announcements from "../components/Announcements";
 
 function Dashboard() {
+
   return (
     <div className="flex flex-col">
       <div>
@@ -38,7 +39,6 @@ function Dashboard() {
       <div className="w-11/12 m-5 rounded-md shadow-md bg-white">
         <Announcements />
       </div>
-      
     </div>
   );
 }
