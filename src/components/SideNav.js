@@ -22,33 +22,33 @@ function SideNav() {
     {
       title: "System",
       navs: [
-        { icon: svgs[0].default, title: "Dashboard", route: "/dashboard" },
-        { icon: svgs[1].default, title: "System", route: "/example" },
-        { icon: svgs[2].default, title: "Analytics", route: "/example" },
+        { icon: svgs[0].default, title: "Dashboard", route: "/" },
+        { icon: svgs[1].default, title: "System", route: "/" },
+        { icon: svgs[2].default, title: "Analytics", route: "/" },
       ],
     },
     {
       title: "Section 2",
       navs: [
-        { icon: svgs[3].default, title: "Nav 1", route: "/example" },
-        { icon: svgs[4].default, title: "Nav 1", route: "/example" },
-        { icon: svgs[5].default, title: "Nav 1", route: "/example" },
+        { icon: svgs[3].default, title: "Nav 1", route: "/" },
+        { icon: svgs[4].default, title: "Nav 2", route: "/" },
+        { icon: svgs[5].default, title: "Nav 3", route: "/" },
       ],
     },
     {
       title: "Section 3",
       navs: [
-        { icon: svgs[6].default, title: "Nav 1", route: "/example" },
-        { icon: svgs[7].default, title: "Nav 1", route: "/example" },
-        { icon: svgs[8].default, title: "Nav 1", route: "/example" },
+        { icon: svgs[6].default, title: "Nav 4", route: "/" },
+        { icon: svgs[7].default, title: "Nav 5", route: "/" },
+        { icon: svgs[8].default, title: "Nav 6", route: "/" },
       ],
     },
     {
       title: "Section 4",
       navs: [
-        { icon: svgs[9].default, title: "Nav 1", route: "/example" },
-        { icon: svgs[10].default, title: "Nav 1", route: "/example" },
-        { icon: svgs[11].default, title: "Nav 1", route: "/example" },
+        { icon: svgs[9].default, title: "Nav 7", route: "/" },
+        { icon: svgs[10].default, title: "Nav 8", route: "/" },
+        { icon: svgs[11].default, title: "Nav 9", route: "/" },
       ],
     },
   ];

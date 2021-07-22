@@ -11,9 +11,7 @@ function Announcements() {
   backgrounds.sort(() => 0.5 - Math.random());
 
   const lorem =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore animi, esse mollitia dolorum cumque porro dolores magni nesciunt, ad maiores, dolor voluptas repudiandae hic? Eos iste aliquam obcaecati ut rem \
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore animi, esse mollitia dolorum cumque porro dolores magni nesciunt, ad maiores, dolor voluptas repudiandae hic? Eos iste aliquam obcaecati ut rem. \
-    Lorem ipsum sit amet consectetur adipisicing elit. Tempore animi, esse mollitia dolorum cumque porro dolores magni nesciunt, ad maiores, dolor voluptas repudiandae hic? Eos iste aliquam obcaecati ut rem.";
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore animi, esse mollitia dolorum cumque porro dolores magni nesciunt, ad maiores, dolor voluptas repudiandae hic? Eos iste aliquam obcaecati ut rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore animi, esse mollitia dolorum cumque porro dolores magni nesciunt, ad maiores, dolor voluptas repudiandae hic? Eos iste aliquam obcaecati ut rem. Lorem ipsum sit amet consectetur adipisicing elit. Tempore animi, esse mollitia dolorum cumque porro dolores magni nesciunt, ad maiores, dolor voluptas repudiandae hic? Eos iste aliquam obcaecati ut rem.";
   let msgs = [
     {
       author: {
@@ -53,9 +51,9 @@ function Announcements() {
     },
   ];
 
-  msgs.sort((a,b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime()
-  })
+  msgs.sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
 
   return (
     <>
@@ -79,7 +77,9 @@ function Announcements() {
             <div className="text-gray-500">| {msg.author.position}</div>
           </div>
           <p>{msg.content}</p>
-          <span className="absolute bottom-5 right-5 text-gray-600">{getTimeElapsed(msg.date)}</span>
+          <span className="absolute bottom-5 right-5 text-gray-600">
+            {getTimeElapsed(msg.date)}
+          </span>
         </div>
       ))}
       <button className="w-full p-5 bg-blue-200 hover:bg-yellow-200">View All Announcements</button>

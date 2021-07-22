@@ -56,7 +56,7 @@ function HeaderNav() {
     <>
       <nav className="flex bg-white justify-between items-stretch mx-5 my-3 shadow-md rounded-full">
         <ul className="flex w-1/2 ml-8">
-          <Link className={navClasses} to="/dashboard">
+          <Link className={navClasses} to="/">
             <li>Dashboard</li>
           </Link>
           <Link className={navClasses} to="/settings">

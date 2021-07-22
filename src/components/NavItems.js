@@ -12,6 +12,7 @@ function NavItems({ children }) {
 
   function handleNavigate(route) {
     history.push(route)
+    window.scrollTo(0,0);
   }
 
   return (

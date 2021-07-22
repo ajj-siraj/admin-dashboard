@@ -32,10 +32,11 @@ function Login() {
 
   function setInput(e){
     let {name, value} = e.target
-    let obj = {
+    let obj = () => ({
       username: () => setUsername(value),
       password: () => setPassword(value)
-    }[name]();
+    }[name]());
+    obj(); //changed to a function to avoid "unused variable" warning
   }
 
   return (
