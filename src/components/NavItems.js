@@ -34,7 +34,7 @@ function NavItems({ children }) {
                 <img
                   src={nav.icon}
                   className={`${imgClasses} h-6 mr-2 ml-5 transition-all filter invert`}
-                  alt={nav.title + "icon"}
+                  alt={nav.title + " icon"}
                 />
               </span>
               <div className={`${navClasses} transition-all`}>{nav.title}</div>

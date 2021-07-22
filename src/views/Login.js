@@ -52,7 +52,7 @@ function Login() {
         {loggedIn ? (
           redirectError
         ) : (
-          <div className="flex flex-col text-center w-11/12 md:w-3/4 lg:w-1/2 rounded-2xl shadow-md text-shadow text-white bg-gray-300 p-10 backdrop-filter backdrop-blur-lg bg-opacity-50">
+          <div className="flex flex-col text-center w-11/12 md:w-3/4 lg:w-1/2 rounded-2xl shadow-md text-shadow text-white bg-gray-300 p-10 backdrop-filter backdrop-blur-sm bg-opacity-50">
             <h1 className="font-semibold text-shadow-md text-xl">Enter Your Login Information</h1>
             <div className="text-blue-100 text-md">
               <pre>Demo Login -- Username: demoadmin, Password: demopassword</pre>
