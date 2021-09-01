@@ -3,4 +3,4 @@ This project is an admin dashboard application sample, complete with frontend au
 
 Created with: React, TailwindCSS, Chart.js
 
-Demo Link: soon
+Demo Link: https://admindashb.netlify.com
